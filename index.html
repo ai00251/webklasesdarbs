@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
 
-    <title>planets</title>
-
-    <link rel="stylesheet" href="styles.css">
+<title>planets</title>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
@@ -20,27 +19,56 @@
         </ul>
     </nav>
 
+    <div class="main-container">
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-bar" />
+        </div>
+
     <div class="cards-container">
         <div class="card saturn-card">
             <img src="https://lh3.googleusercontent.com/d/18ujwiC3DO0GFJ7WCchu-dYpgvvjbrk4i" alt="saturn" class="card-image">
             <h3 class="saturn-heading">saturn</h3>
             <p>saturn is the second-largest planet in our solar system, known for its stunning ring system made of ice and rock particles. it has at least 83 moons, including titan, which is larger than the planet mercury.</p>
-            <button class="card-button">go there</button>
+            <button class="card-button" onclick="openModal('saturnModal')">launch a rocket</button>
         </div>
         <div class="card neptune-card">
             <img src="https://lh3.googleusercontent.com/d/1dny3Mv0A_TfV0wyhjwOaQVhvLFL0BINT" alt="neptune" class="card-image">
             <h3 class="neptune-heading">neptune</h3>
             <p>neptune is the farthest planet from the sun, characterized by its deep blue color and strong winds. it has 14 known moons, with triton being the largest and most geologically active.</p>
-            <button class="card-button">go there</button>
+            <button class="card-button" onclick="openModal('neptuneModal')">launch a rocket</button>
         </div>
         <div class="card venus-card">
             <img src="https://lh3.googleusercontent.com/d/1EifGe9u7jx3OfHiJcWZlfdAhzxaRtRBh" alt="venus" class="card-image">
             <h3 class="venus-heading">venus</h3>
             <p>venus is the hottest planet in our solar system, with a thick atmosphere of carbon dioxide that traps heat. its surface is covered in volcanoes and vast plains, making it similar in size and structure to earth.</p>
-            <button class="card-button">go there</button>
+            <button class="card-button" onclick="openModal('venusModal')">launch a rocket</button>
         </div>
     </div>
 
-    <script src="script.js"></script>
+<div id="saturnModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('saturnModal')">&times;</span>
+        <h2>about saturn</h2>
+        <p>saturn is the sixth planet from the sun and is renowned for its stunning ring system, which is made up of ice and rock particles. it is a gas giant, primarily composed of hydrogen and helium, with a diameter nine times that of earth. saturn has at least 82 moons, with titan being the largest and larger than the planet mercury. its low density allows it to float in water, as it is mostly made of gas. saturn has a fast rotation speed, completing a day in about 10.7 hours. the planet experiences intense storms, including massive hurricanes that can last for years.</p>
+    </div>
+</div>
+
+<div id="neptuneModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('neptuneModal')">&times;</span>
+        <h2>about neptune</h2>
+        <p>neptune is the eighth and farthest planet from the sun, known for its deep blue color caused by methane in its atmosphere. it has the strongest winds in the solar system, reaching speeds of over 1,200 miles per hour. discovered in 1846, neptune is a gas giant with a diameter four times that of earth. it has a complex system of rings and 14 known moons, with triton being the largest. triton is unique because it has a retrograde orbit, suggesting it may have been captured by neptune's gravity. despite being far from the sun, neptune emits more heat than it receives, hinting at an internal heat source.</p>
+    </div>
+</div>
+
+<div id="venusModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('venusModal')">&times;</span>
+        <h2>about venus</h2>
+        <p>venus is the second planet from the sun and is often called earth's twin due to its similar size. it has a thick atmosphere composed mainly of carbon dioxide, which creates a runaway greenhouse effect, making it the hottest planet in the solar system. the surface of venus is dotted with volcanoes and vast plains. it rotates very slowly on its axis, taking about 243 earth days to complete one rotation. unlike most planets, venus rotates in the opposite direction, meaning the sun rises in the west and sets in the east. due to its bright appearance, it is often visible from earth and is referred to as the morning star or evening star.</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
