@@ -202,37 +202,6 @@ body {
     cursor: pointer;
 }
 
-/* Responsiveness */
-@media (max-width: 768px) {
-    .cards-container {
-        flex-direction: column; /* Stack cards on smaller screens */
-        align-items: center;
-    }
-
-    .card {
-        width: 90%; /* Use 90% of the container width */
-    }
-
-    .navbar ul {
-        flex-direction: column; /* Stack navbar items */
-        gap: 10px;
-    }
-
-    .search-bar {
-        width: 90%; /* Use 90% of the container width */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 100%; /* Full width on small screens */
-    }
-
-    .toggle-button {
-        width: 100%; /* Full width for toggle button */
-    }
-}
-
 /* Hover effects */
 .search-bar:hover {
     transform: scale(1.05); 
