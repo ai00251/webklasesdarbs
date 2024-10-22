@@ -105,7 +105,6 @@ body {
     position: relative;
 }
 
-
 .navbar ul li a {
     color: #dcdcdc;
     text-decoration: none;
@@ -131,11 +130,18 @@ body {
     transition: transform 0.5s;
 }
 
+.hamburger {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
 /* Searchbar */
 .main-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 90px;
 }
 
 .search-container {
@@ -253,6 +259,28 @@ body {
     }
 }
 
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+    .navbar ul.active {
+        display: block; /* Show menu items when active */
+        position: absolute; /* Positioning for dropdown */
+        background-color: rgb(0, 0, 0); /* Background for dropdown */
+        width: 100%; /* Full width */
+        text-align: left; /* Align text to the left */
+        padding: 10px 0; /* Spacing */
+    }
+
+    body.light-mode .navbar ul.active {
+        background-color: rgb(219, 219, 219); /* Background for dropdown */
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
+
 
 /* Hover effects */
 .search-bar:hover {
@@ -324,6 +352,19 @@ body.light-mode .dropdown li a {
 }
 
 body.light-mode .dropdown li a:hover {
+    background-color: #e0e0e0;
+}
+
+body.light-mode .hamburger {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+body.light-mode .hamburger div {
+    background-color: #000000;
+}
+
+body.light-mode .hamburger.open {
     background-color: #e0e0e0;
 }
 

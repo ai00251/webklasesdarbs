@@ -39,4 +39,10 @@ window.addEventListener('click', function(event) {
     }
 });
 
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    const navbarItems = document.querySelector('.navbar ul');
+    navbarItems.classList.toggle('active');
+});
+
+
 
