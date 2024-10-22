@@ -26,3 +26,17 @@ window.onclick = function(event) {
     }
 }
 
+document.querySelector('.dropdown-toggle').addEventListener('click', function(event) {
+    event.preventDefault();
+    const dropdown = this.nextElementSibling;
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+window.addEventListener('click', function(event) {
+    const dropdown = document.querySelector('.dropdown');
+    if (!event.target.matches('.dropdown-toggle') && dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+    }
+});
+
+
